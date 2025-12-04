@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" href="./images/fav-icon.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DoctorCare | HTML, Tailwind CSS, JavaScript Landing Page</title>
+  <!-- custom CSS -->
+  
+
+  <!-- gogle fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet" />
+ <!-- Tailwind CSS link -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#00856F",
+            "green-light": "#DCE9E2",
+            "green-light-02": "#F7F9F9",
+            "brand-beige": "#FFFAF1",
+            "brand-green-hover": "#00453A",
+            "secondary": "#495057",
+
+          },
+          fontFamily: {
+            primary: ["DM Sans", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- remix icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .active {
+      font-weight: bold;
+    }
+  </style>
+
+  <!-- custom css -->
+   <link rel="stylesheet" href="./style.css"> 
+</head>
+
+<body class="bg-green-light-02 overflow-x-hidden font-primary">
+  <!-- header section -->
+  <header id="header" class="bg-[#DCE9E2] text-primary fixed top-0 right-0 left-0 w-full z-50">
+    <nav class="container max-w-screen-xl mx-auto flex justify-between items-center p-4">
+      <!-- logo -->
+      <div class="text-xl font-bold ">
+        <a href="/" class="text-black">Doctor<span class="text-primary">Care</span></a>
+      </div>
+      <!-- menu item -->
+      <ul class="hidden md:flex space-x-8">
+        <li>
+          <a href="#home" class="hover:text-primary">Início</a>
+        </li>
+        <li>
+          <a href="#services" class="hover:text-primary">Serviços</a>
+        </li>
+        <li>
+          <a href="#about" class="hover:text-primary">Sobre</a>
+        </li>
+        <li>
+          <a href="#contact" class="hover:text-primary">Depoimentos</a>
+        </li>
+      </ul>
+      <!-- call to action button -->
+      <div id="contact-button" class="hidden md:block">
+        <a href="#contact"
+          class="md:w-56 text-primary hover:text-white border border-primary px-6 py-2.5 rounded-full hover:bg-primary transition-all duration-200 md:flex justify-center">Agendar
+          consulta</a>
+      </div>
+      <!-- mobile nav bar -->
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="navbar-burger flex items-center p-3">
+          <img src="images/menu-icon.svg" alt="menu icon" class="block h-4 w-4">
+        </button>
+    </nav>
+    </div>
+
+    <!-- TODO mobile section -->
+  </header>
+
+  <!-- hero or banner section  -->
+  <section class="bg-[#DCE9E2] flex items-center justify-between gap-8 py-28" id="home">
+    <div class="container max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center">
+      <!-- text content -->
+      <div class="w-full md:w-2/3 text-center sm:text-left mb-8 md:mb-0 hero-content">
+        <h2 class="text-sm text-primary font-bold mb-4">BOAS-VINDAS A DOCTORCARE 👋</h2>
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">Assistência médica simplificada para todos</h1>
+        <p class="text-lg md:text-xl mb-8 md:w-4/5">Os médicos da DoctorCare vão além dos sintomas para tratar a causa
+          raiz de sua doença e proporcionar uma cura a longo prazo.</p>
+        <button
+          class="bg-primary text-white px-6 py-3 rounded-full text-lg hover:brand-green-hover flex w-full sm:w-72 gap-3">
+          <i class="ri-whatsapp-line"></i>
+          <a href="#contant">Agende sua consulta</a>
+        </button>
+      </div>
+
+
+      <!-- image section -->
+      <div class="w-full md:w-1/3 flex justify-center md:justify-end heroimage ">
+        <img src="./images/hero-banner.png" alt="" class="w-full object-cover">
+      </div>
+
+    </div>
+
+
+
+  </section>
+
+  <!-- Stats Section -->
+  <section
+    class="container max-w-screen-xl mx-auto bg-brand-beige md:h-52 md:-mt-28 mt-0 rounded-lg shadow-lg stats-section">
+
+    <div class="p-8 pt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-center">
+      <div class="text-center p-4 rounded-md md:border-r border-b md:border-b-0">
+        <h4 class="font-bold text-5xl mb-1 ">+3.500</h4>
+        <p class="text-primary">Pacientes atendidos</p>
+      </div>
+      <div class="text-center p-4 rounded-md md:border-r border-b md:border-b-0">
+        <h4 class="font-bold text-5xl mb-1 ">+15</h4>
+        <p class="text-primary">Especialistas disponíveis</p>
+      </div>
+      <div class="text-center p-4 rounded-md">
+        <h4 class="font-bold text-5xl mb-1 ">+10</h4>
+        <p class="text-primary">Anos no mercado</p>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- services section -->
+  <section class="md:py-20 py-12 bg-gray-100" id="services">
+    <div class="max-w-7xl container mx-auto p-4 text-center">
+      <div class="service-content">
+        <p class="text-primary text-lg mb-4 mt-12">SERVIÇOS</p>
+        <!-- Headline -->
+        <h2 class="text-3xl md:text-5xl md:leading-snug font-bold sm:w-1/2 mx-auto mb-12">
+          Como podemos ajudá-lo a se sentir melhor?
+        </h2>
+      </div>
+      <!-- inject service item into card -->
+      <div id="service-container"
+        class="grid grid-cols-1 text-left md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 service-content">
+      </div>
+    </div>
+  </section>
+
+   <!-- about section -->
+    <section class="md:py-20 py-12 bg-brand-beige"id="about">
+      <div class="py-12 max-w-screen-xl cotainer mx-auto p-4 flex flex-col md:flex-row items-center gap-12 justify-between ">
+           <div class="w-full md:w-1/2 mb-8 md:mb-0 about-section ">
+            <img src="./images/about.png" alt="" class="w-full h-auto rounded-lg">
+           </div>
+           <div class="w-full md:w-1/2 mb-8 md:pl-8 about-section">
+           <h3 class="text-primary font-bold text-sm mb-2.5">SOBRE NÓS</h3>
+           <h2 class="text-3xl md:text-4xl font-bold text-head mb-4 md:w-2/3 ">Entenda quem somos e por que existimos</h2>
+           <p class="text-[#495057] leading-relaxed">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+           </div>
+           </div>
+    </section>
+
+   <!-- contact section -->
+    <section class="md:py-20 py-12 " id="contact">
+      <div class="py-12 max-w-screen-xl cotainer mx-auto p-4 flex flex-col md:flex-row-reverse items-center gap-12 justify-between ">
+           <div class="w-full md:w-1/2 mb-8 md:mb-0 contact-section ">
+            <img src="./images/contact.png" alt="" class="w-full h-auto rounded-lg">
+           </div>
+           <div class="w-full md:w-1/2 mb-8 md:pl-8 contact-section">
+    
+           <h2 class="text-3xl md:text-4xl font-bold text-head mb-5 md:w-2/3 ">Entre em contato com a gente!</h2>
+          <p class="text-secondary">
+           <i class="ri-map-pin-line text-primary gap-2"></i> R. Amauri Souza, 346
+          </p>
+          <p class="text-secondary">
+            <i class="ri-mail-fill  text-primary gap-2 "></i>contato@doctorcare.com
+          </p>
+           </div>
+           </div>
+    </section>
+
+    <!-- footer section -->
+     <footer class="bg-primary text-white py-6">
+      <div class=" max-w-screen-xl container mx-auto px-4 py-8 flex flex-col sm:flex-row justify-between items-center gap-8 ">
+        <div class="mr-4 text-xl ">
+          <a href="" class="bolok text-4xl font-bold  text-white mb-4">DoctorCare</a>
+          <p class="text-sm mb-2">&copy; 2024-doctorCare</p>
+          <p class="text-sm mb-4">Todos os direitos reservados.</p>
+        </div>
+        <div class="flex space-x-4 mt-4 md:mt-0">
+          <a href="#" class="text-white hover:text-gray-500">
+            <i class="ri-instagram-line text-2xl"></i>
+          </a>
+          <a href="#" class="text-white hover:text-gray-500">
+            <i class="ri-facebook-circle-fill text-2xl"></i>
+          </a>
+          <a href="#" class="text-white hover:text-gray-500">
+            <i class="ri-youtube-line text-2xl"></i>
+          </a>
+        </div>
+      </div>
+     </footer>
+
+
+
+
+
+  <!-- js connect -->
+
+  <script src="./js/services.js"></script>
+  <!-- <script src="./js/app.js"></script> -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="./js/animation.js"></script>
+  
+
+
+</body>
+
+</html>

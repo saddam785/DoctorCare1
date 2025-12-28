@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DoctorCare | HTML, Tailwind CSS, JavaScript Landing Page</title>
   <!-- custom CSS -->
-  
+
 
   <!-- gogle fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,7 +15,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
     rel="stylesheet" />
- <!-- Tailwind CSS link -->
+  <!-- Tailwind CSS link -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -51,7 +51,7 @@
   </style>
 
   <!-- custom css -->
-   <link rel="stylesheet" href="./style.css"> 
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body class="bg-green-light-02 overflow-x-hidden font-primary">
@@ -92,6 +92,40 @@
     </div>
 
     <!-- TODO mobile section -->
+    <div id="mobile-menu" class="navbar-menu relative z-50 hidden ">
+      <div class="navber-backdrop fixed inset-0 bg-primary  ">
+        <nav class="fixed top-0 left-0 flex flex-col w-full max-w-sm py-6 px-6 text-white border-r overflow-y-hidden">
+          <div class="flex items-center mb-8">
+            <a href="/" class=" mr-auto text-2xl leading-none text-white">Doctor<span class="text-white">Care</span></a>
+            <button id="mobile-menu-close" class="navber-close p-1 rounded-full bg-white ">
+              <img src="./images/close-menu-icon.svg" alt="" class="h-6 w-6 text-gray-600 cursor-pointer hover:text-gray-500
+              ">
+            </button>
+          </div>
+          <div>
+            <ul class="space-y-5">
+              <li class="mb-2">
+                <a href="#home" class="hover:text-primary">Início</a>
+              </li>
+              <li>
+                <a href="#services" class="hover:text-primary">Serviços</a>
+              </li>
+              <li>
+                <a href="#about" class="hover:text-primary">Sobre</a>
+              </li>
+              <li>
+                <a href="#contact" class="hover:text-primary">Depoimentos</a>
+              </li>
+            </ul>
+          </div>
+          <div class="block md:hidden mt-12">
+            <a href="#contact"
+              class=" text-primary bg-white hover:text-white border border-primary px-6 py-2.5 rounded-full hover:bg-primary transition-all duration-200 md:flex justify-center">Agendar
+              consulta</a>
+          </div>
+        </nav>
+      </div>
+    </div>
   </header>
 
   <!-- hero or banner section  -->
@@ -161,60 +195,68 @@
     </div>
   </section>
 
-   <!-- about section -->
-    <section class="md:py-20 py-12 bg-brand-beige"id="about">
-      <div class="py-12 max-w-screen-xl cotainer mx-auto p-4 flex flex-col md:flex-row items-center gap-12 justify-between ">
-           <div class="w-full md:w-1/2 mb-8 md:mb-0 about-section ">
-            <img src="./images/about.png" alt="" class="w-full h-auto rounded-lg">
-           </div>
-           <div class="w-full md:w-1/2 mb-8 md:pl-8 about-section">
-           <h3 class="text-primary font-bold text-sm mb-2.5">SOBRE NÓS</h3>
-           <h2 class="text-3xl md:text-4xl font-bold text-head mb-4 md:w-2/3 ">Entenda quem somos e por que existimos</h2>
-           <p class="text-[#495057] leading-relaxed">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
-           </div>
-           </div>
-    </section>
-
-   <!-- contact section -->
-    <section class="md:py-20 py-12 " id="contact">
-      <div class="py-12 max-w-screen-xl cotainer mx-auto p-4 flex flex-col md:flex-row-reverse items-center gap-12 justify-between ">
-           <div class="w-full md:w-1/2 mb-8 md:mb-0 contact-section ">
-            <img src="./images/contact.png" alt="" class="w-full h-auto rounded-lg">
-           </div>
-           <div class="w-full md:w-1/2 mb-8 md:pl-8 contact-section">
-    
-           <h2 class="text-3xl md:text-4xl font-bold text-head mb-5 md:w-2/3 ">Entre em contato com a gente!</h2>
-          <p class="text-secondary">
-           <i class="ri-map-pin-line text-primary gap-2"></i> R. Amauri Souza, 346
-          </p>
-          <p class="text-secondary">
-            <i class="ri-mail-fill  text-primary gap-2 "></i>contato@doctorcare.com
-          </p>
-           </div>
-           </div>
-    </section>
-
-    <!-- footer section -->
-     <footer class="bg-primary text-white py-6">
-      <div class=" max-w-screen-xl container mx-auto px-4 py-8 flex flex-col sm:flex-row justify-between items-center gap-8 ">
-        <div class="mr-4 text-xl ">
-          <a href="" class="bolok text-4xl font-bold  text-white mb-4">DoctorCare</a>
-          <p class="text-sm mb-2">&copy; 2024-doctorCare</p>
-          <p class="text-sm mb-4">Todos os direitos reservados.</p>
-        </div>
-        <div class="flex space-x-4 mt-4 md:mt-0">
-          <a href="#" class="text-white hover:text-gray-500">
-            <i class="ri-instagram-line text-2xl"></i>
-          </a>
-          <a href="#" class="text-white hover:text-gray-500">
-            <i class="ri-facebook-circle-fill text-2xl"></i>
-          </a>
-          <a href="#" class="text-white hover:text-gray-500">
-            <i class="ri-youtube-line text-2xl"></i>
-          </a>
-        </div>
+  <!-- about section -->
+  <section class="md:py-20 py-12 bg-brand-beige" id="about">
+    <div
+      class="py-12 max-w-screen-xl cotainer mx-auto p-4 flex flex-col md:flex-row items-center gap-12 justify-between ">
+      <div class="w-full md:w-1/2 mb-8 md:mb-0 about-section ">
+        <img src="./images/about.png" alt="" class="w-full h-auto rounded-lg">
       </div>
-     </footer>
+      <div class="w-full md:w-1/2 mb-8 md:pl-8 about-section">
+        <h3 class="text-primary font-bold text-sm mb-2.5">SOBRE NÓS</h3>
+        <h2 class="text-3xl md:text-4xl font-bold text-head mb-4 md:w-2/3 ">Entenda quem somos e por que existimos</h2>
+        <p class="text-[#495057] leading-relaxed">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          sint.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact section -->
+  <section class="md:py-20 py-12 " id="contact">
+    <div
+      class="py-12 max-w-screen-xl cotainer mx-auto p-4 flex flex-col md:flex-row-reverse items-center gap-12 justify-between ">
+      <div class="w-full md:w-1/2 mb-8 md:mb-0 contact-section ">
+        <img src="./images/contact.png" alt="" class="w-full h-auto rounded-lg">
+      </div>
+      <div class="w-full md:w-1/2 mb-8 md:pl-8 contact-section">
+
+        <h2 class="text-3xl md:text-4xl font-bold text-head mb-5 md:w-2/3 ">Entre em contato com a gente!</h2>
+        <p class="text-secondary">
+          <i class="ri-map-pin-line text-primary gap-2"></i> R. Amauri Souza, 346
+        </p>
+        <p class="text-secondary">
+          <i class="ri-mail-fill  text-primary gap-2 "></i>contato@doctorcare.com
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer section -->
+  <footer class="bg-primary text-white py-6">
+    <div
+      class=" max-w-screen-xl container mx-auto px-4 py-8 flex flex-col sm:flex-row justify-between items-center gap-8 ">
+      <div class="mr-4 text-xl ">
+        <a href="" class="bolok text-4xl font-bold  text-white mb-4">DoctorCare</a>
+        <p class="text-sm mb-2">&copy; 2024-doctorCare</p>
+        <p class="text-sm mb-4">Todos os direitos reservados.</p>
+      </div>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="#" class="text-white hover:text-gray-500">
+          <i class="ri-instagram-line text-2xl"></i>
+        </a>
+        <a href="#" class="text-white hover:text-gray-500">
+          <i class="ri-facebook-circle-fill text-2xl"></i>
+        </a>
+        <a href="#" class="text-white hover:text-gray-500">
+          <i class="ri-youtube-line text-2xl"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
 
 
 
@@ -226,7 +268,7 @@
   <!-- <script src="./js/app.js"></script> -->
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="./js/animation.js"></script>
-  
+
 
 
 </body>
